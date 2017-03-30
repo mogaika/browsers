@@ -1,11 +1,10 @@
 package browsers
 
-/* Saved password interface */
-type Password interface {
-	/* Url, where password been saved */
-	Urls() (form, target string)
-	Username() (element, username string)
-	Password() (element, password string)
+/* Saved password */
+type Password struct {
+	OriginUrl, ActionUrl      string
+	Username, UsernameElement string
+	Password, PasswordElement string
 }
 
 type Browser interface {
